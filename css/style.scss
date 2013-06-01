@@ -63,11 +63,15 @@ a {
   color: $linkColor;
 }
 
+.container {
+  width: 800px;
+}
+
 .header {
   padding: 5px;
   background-color: $background0;
 
-  a {
+  .logo {
     display: inline-block;
     padding: 8px 0 8px 40px;
     color: $textColor;
@@ -76,10 +80,21 @@ a {
     text-decoration: none;
     background: url(/images/yo.png) no-repeat 1px;
   }
+
+  .social {
+    margin: 7px 0 0 0;
+    padding: 0;
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin: 0 0 0 10px;
+    }
+  }
 }
 
 .content {
-  width: 800px;
   padding: 15px;
 }
 
