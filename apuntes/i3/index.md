@@ -9,14 +9,12 @@ i3
 
 El siguiente snippet asume que no tenemos PulseAudio instalado:
 
-<pre>
-  <code>
+{% highlight %}
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master toggle
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
 bindsym XF86AudioMicMute     exec --no-startup-id amixer set Capture toggle
-  </code>
-</pre>
+{% endhighlight %}
 
 ### 2. Configurar las teclas de brillo del monitor
 
