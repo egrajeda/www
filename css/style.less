@@ -1,15 +1,15 @@
-$textColor: #34495e;
-$linkColor: #3498db;
+@textColor: #34495e;
+@linkColor: #3498db;
 
-$color0: #c0392b;
-$color1: #e74c3c;
+@color0: #c0392b;
+@color1: #e74c3c;
 
-$background0: #ecf0f1;
+@background0: #ecf0f1;
 
 body {
   margin: 0;
   font: 14px 'Roboto', sans-serif;
-  color: $textColor;
+  color: @textColor;
 }
 
 h1, h2, h3 {
@@ -20,13 +20,13 @@ h1, h2, h3 {
 
 h1 {
   font-size: 32px;
-  color: $color0;
+  color: @color0;
   letter-spacing: -2px;
 }
 
 h2 {
   font-size: 24px;
-  color: $color1;
+  color: @color1;
   letter-spacing: -2px;
 }
 
@@ -51,16 +51,21 @@ h1 + p, h2 + p, h3 + p {
 
 p {
   line-height: 150%;
+
+  code {
+    padding: 0 3px;
+    display: inline-block;
+  }
 }
 
 code {
-  padding: 0 3px;
+  display: block;
   font-family: 'Ubuntu Mono', monospace;
-  background-color: $background0;
+  background-color: @background0;
 }
 
 a {
-  color: $linkColor;
+  color: @linkColor;
 }
 
 .container {
@@ -69,12 +74,12 @@ a {
 
 .header {
   padding: 5px;
-  background-color: $background0;
+  background-color: @background0;
 
   .logo {
     display: inline-block;
     padding: 8px 0 8px 40px;
-    color: $textColor;
+    color: @textColor;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
@@ -101,7 +106,7 @@ a {
 .toc {
   width: 250px;
   float: right;
-  background-color: $background0;
+  background-color: @background0;
   font-size: 12px;
 
   &:before {
@@ -132,7 +137,7 @@ a {
 
 .highlight {
   padding: 5px 5px 7px;
-  background-color: $background0;
+  background-color: @background0;
 
   pre {
     margin: 0;
