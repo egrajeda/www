@@ -114,6 +114,7 @@ a {
 .highlight {
   padding: 5px 5px 7px;
   background-color: #ecf0f1;
+  margin-bottom: 14px;
 }
 .highlight pre {
   margin: 0;
