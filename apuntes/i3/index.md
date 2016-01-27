@@ -5,7 +5,7 @@ layout: default
 i3
 ==
 
-### 1. Configurar las teclas multimedia
+### Configurar las teclas multimedia
 
 El siguiente snippet asume que no tenemos PulseAudio instalado:
 
@@ -16,7 +16,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
 bindsym XF86AudioMicMute     exec --no-startup-id amixer set Capture toggle
 {% endhighlight %}
 
-### 2. Configurar las teclas de brillo del monitor
+### Configurar las teclas de brillo del monitor
 
 Para que el siguiente snippet funcione tenemos que tener instalado los drivers
 de nuestra tarjeta de video, que en mi caso es `xf86-video-intel`:
