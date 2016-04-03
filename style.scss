@@ -54,6 +54,9 @@ h1 {
 h2 {
   color: #E74C3C;
   font-size: 24px;
+  a {
+    color: inherit;
+  }
 }
 
 h3 {
@@ -151,10 +154,6 @@ img {
 // .masthead
 //
 
-.wrapper-masthead {
-  margin-bottom: 50px;
-}
-
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
@@ -239,14 +238,43 @@ nav {
 // .main
 //
 
-.posts > .post {
+#main {
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+.posts > .post,
+.posts > .update {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
 }
 
-.posts > .post:last-child {
+.posts > .post:last-child,
+.posts > .update:last-child {
   padding-bottom: 1em;
   border-bottom: none;
+}
+
+.posts > .update {
+  padding-top: 28px;
+  padding-left: 70px;
+  background: url('images/document.png') no-repeat 10px 30px;
+
+  h1, h2 {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  h2 {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+  }
 }
 
 .post {
@@ -269,10 +297,31 @@ nav {
   .comments {
     margin-top: 10px;
   }
+}
 
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
+.page {
+  .podcast {
+    display: block;
+    height: 60px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.06);
+
+    img {
+      float: left;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    span {
+      display: block;
+      color: rgba(0, 0, 0, 0.85);
+
+      &.title {
+        color: #E74C3C;
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
   }
 }
 
