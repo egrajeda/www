@@ -34,9 +34,7 @@ egrajeda@host:~$ docker pull sebp/elk
   <p>Para descargar exactamente la misma imagen que se utilizó al escribir este
   documento utiliza:</p>
 
-  <div class="highlight">
-    <pre><code class="language-text" data-lang="text">egrajeda@host:~$ docker pull sebp/elk@sha256:919c9e3e9ac95f4860fe2c8d3ec480ce1e1d9b39939adb76649b4257586a53d8</code></pre>
-  </div>
+  <pre class="highlight"><code class="language-text" data-lang="text">egrajeda@host:~$ docker pull sebp/elk@sha256:919c9e3e9ac95f4860fe2c8d3ec480ce1e1d9b39939adb76649b4257586a53d8</code></pre>
 </div>
 
 Después creamos el contenedor a partir de la imagen que descargamos:
@@ -160,13 +158,12 @@ ellas:
    especificar múltiples archivos: uno por línea y deben empezar con `-`.
 2. `hosts`: Los servidores Logstash a los cuales conectarse.
 
-{{ site.baseurl }}
 <div class="info">
   <p>Para estas pruebas utilicé una versión anonimizada de un subconjunto (3000
   líneas) de <a href="http://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html">access
   logs publicados por la NASA</a>. Si deseas usar el mismo archivo,
   <a href="{{ site.baseurl }}/downloads/access_log">descárgalo</a> y guárdalo
-  en la carpeta <code>~/labs/elk-filebeat</code>.
+  en la carpeta <code>~/labs/elk-filebeat</code>.</p>
 </div>
 
 Probemos la configuración ejecutando Filebeat de la siguiente manera:
