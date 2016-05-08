@@ -4,9 +4,30 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
-    {% if post.categories contains "apuntes" %}
-      <article class="update">
 
+    {% capture date %}
+      {% assign m = post.date | date: "%-m" %}
+      {{ post.date | date: "%-d" }} de
+      {% case m %}
+        {% when "1" %}enero
+        {% when "2" %}febrero
+        {% when "3" %}marzo
+        {% when "4" %}abril
+        {% when "5" %}mayo
+        {% when "6" %}junio
+        {% when "7" %}julio
+        {% when "8" %}agosto
+        {% when "9" %}septiembre
+        {% when "10" %}octubre
+        {% when "11" %}noviembre
+        {% when "12" %}diciembre
+      {% endcase %}
+      de {{ post.date | date: "%Y" }}
+    {% endcapture %}
+
+    {% if post.categories contains "apuntes" %}
+      <article class="update apuntes">
+        <span class="date">{{ date }}</span>
         <h2>
           {% if post.categories contains "podcasts" %}
             Apunte sobre podcast
@@ -16,10 +37,10 @@ layout: default
           agregado o actualizado:
         </h2>
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
       </article>
     {% else %}
       <article class="post">
+        <span class="date">{{ date }}</span>
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
         <div class="entry">

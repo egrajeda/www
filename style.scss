@@ -119,11 +119,6 @@ img {
   max-width: none;
 }
 
-.date {
-  font-style: italic;
-  color: $gray;
-}
-
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;
@@ -245,35 +240,64 @@ nav {
   }
 }
 
-.posts > .post,
-.posts > .update {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
+.posts {
+  & > .post,
+  & > .update {
+    padding-bottom: 2em;
+    border-bottom: 1px solid $lightGray;
 
-.posts > .post:last-child,
-.posts > .update:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
-.posts > .update {
-  padding-top: 28px;
-  padding-left: 70px;
-  background: url('images/document.png') no-repeat 10px 30px;
-
-  h1, h2 {
-    margin: 0;
+    &:last-child {
+      padding-bottom: 1em;
+      border-bottom: none;
+    }
   }
 
-  h1 {
-    font-size: 20px;
-    line-height: 20px;
+  .date {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
   }
 
-  h2 {
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 16px;
+  & > .update {
+    padding-top: 28px;
+    padding-left: 70px;
+    background-repeat: no-repeat;
+    background-position: 10px 34px;
+    line-height: 100%;
+
+    &.apuntes {
+      background-image: url('images/document.png');
+    }
+
+    &.links {
+      background-image: url('images/bookmark.png');
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    h2 {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 14px;
+      line-height: 140%;
+      margin: 2px 0 0 0;
+    }
+  }
+
+  & > .post {
+    padding-top: 28px;
+
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 100%;
+    }
   }
 }
 
