@@ -38,6 +38,12 @@ layout: default
         </h2>
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       </article>
+    {% elsif post.categories contains "enlaces" %}
+      <article class="update enlaces">
+        <span class="date">{{ date }}</span>
+        <h1><a href="{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h1>
+        <h2>ha sido agregado a la colección de enlaces.</h2>
+      </article>
     {% else %}
       <article class="post">
         <span class="date">{{ date }}</span>

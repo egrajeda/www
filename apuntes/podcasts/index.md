@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Podcasts
+categories: [apuntes, podcasts]
 ---
 
 Compilación de apuntes personales que he tomado al escuchar algunos podcasts. No
