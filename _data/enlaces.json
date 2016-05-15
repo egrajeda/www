@@ -1,8 +1,14 @@
 [
   {
-    "category": "career",
-    "title": "Being A Developer After 40",
-    "excerpt": "Hi everyone, I am a forty-two years old self-taught developer, and this is my story. I started my career as a software developer at precisely 10am, on Monday October 6th, 1997, somewhere in the city of Olivos, just north of Buenos Aires, Argentina. The moment was Unix Epoch 876142800. I had recently celebrated my 24th birthday.",
-    "url": "https://medium.freecodecamp.com/being-a-developer-after-40-3c5dd112210c"
+    "category": "career", 
+    "url": "https://medium.freecodecamp.com/being-a-developer-after-40-3c5dd112210c", 
+    "excerpt": "Hi everyone, I am a forty-two years old self-taught developer, and this is my story. I started my career as a software developer at precisely 10am, on Monday October 6th, 1997, somewhere in the city of Olivos, just north of Buenos Aires, Argentina. The moment was Unix Epoch 876142800. I had recently celebrated my 24th birthday.", 
+    "title": "Being A Developer After 40"
+  }, 
+  {
+    "url": "http://blog.karhatsu.com/2013/08/from-hour-estimates-gradually-to.html", 
+    "category": "agile", 
+    "excerpt": "This is my first blog post, welcome! I would like to share with you my real-life experience related to #NoEstimates. I've been following the discussion on Twitter this year but learned most of what I know by reading blogs. So maybe you can learn something from my post as well.", 
+    "title": "From hour estimates gradually to #NoEstimates"
   }
 ]
