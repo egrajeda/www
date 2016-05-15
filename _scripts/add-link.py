@@ -53,7 +53,7 @@ def store_link_post(filename, link):
         post_file.write(
 """---
 layout: post
-title: %s
+title: "%s"
 permalink: %s
 counter: %d
 sitemap: false
