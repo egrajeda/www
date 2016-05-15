@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 """
 Script que recibe la información de un enlace y lo agrega a la colección, al
 mismo tiempo que actualiza o agrega una blog post para reflejar eso en la
