@@ -16,5 +16,11 @@
     "category": "happiness", 
     "excerpt": "I saw a story on Facebook the other day. Like most stories that get passed around Facebook, it\u2019s probably only 38% true and written by a 16-year-old. But regardless, I found it cool, and at the very least, thought-provoking.  It was about a man named Mohammed El-Erian.", 
     "title": "No, You Can\u2019t Have It All"
+  }, 
+  {
+    "url": "http://www.infoq.com/presentations/twitter-services", 
+    "category": "java", 
+    "excerpt": "You are now in FULL VIEW       by  on Apr 10, 2016 |                                   Sponsored Content      Cloud-Based Java Development: Choosing the Right PaaS Oracle       Cloudy with 100% Visibility: Monitoring Application Performance in Hybrid Clouds New Relic", 
+    "title": "Life of a Twitter JVM Engineer"
   }
 ]
