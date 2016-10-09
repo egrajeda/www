@@ -28,5 +28,11 @@
     "category": "agile", 
     "excerpt": "Last year, I wrote an article (\u201cWhy Agile didn\u2019t work\u201d) that provoked a lot of discussion. Some people have been badly hurt by Agile, while others have had good experiences with Agile. These discussions usually boil down to the same conclusion: \u201cit is not about process, it is about people.", 
     "title": "So, How Do You Make Agile Successful?"
+  }, 
+  {
+    "url": "http://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/", 
+    "category": "programming", 
+    "excerpt": "Many development teams are used to making heavy use of branches in version control. Distributed version control systems make this even more convenient. Thus one of the more controversial statements in Continuous Delivery is that you can\u2019t do continuous integration and use branches.", 
+    "title": "Make Large Scale Changes Incrementally with Branch By Abstraction"
   }
 ]
