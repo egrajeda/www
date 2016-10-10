@@ -20,7 +20,7 @@
   {
     "url": "http://www.infoq.com/presentations/twitter-services", 
     "category": "java", 
-    "excerpt": "You are now in FULL VIEW       by  on Apr 10, 2016 |                                   Sponsored Content      Cloud-Based Java Development: Choosing the Right PaaS Oracle       Cloudy with 100% Visibility: Monitoring Application Performance in Hybrid Clouds New Relic", 
+    "excerpt": "Tony Printezis presents an overview of how services are deployed and monitored at Twitter; the benefits of using a custom-built JVM with in-house features and the challenges of the use of the JVM in an environment like Twitter.", 
     "title": "Life of a Twitter JVM Engineer"
   }, 
   {
