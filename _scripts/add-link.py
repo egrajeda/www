@@ -54,7 +54,7 @@ def store_link_post(filename, link):
 """---
 layout: post
 title: "%s"
-permalink: /enlaces
+permalink: /enlaces/
 counter: %d
 sitemap: false
 draft: true
