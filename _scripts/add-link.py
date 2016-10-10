@@ -54,11 +54,11 @@ def store_link_post(filename, link):
 """---
 layout: post
 title: "%s"
-permalink: %s
+permalink: /enlaces
 counter: %d
 sitemap: false
 draft: true
----""" % (link['title'], link['url'], counter + 1))
+---""" % (link['title'], counter + 1))
         post_file.truncate()
 
 def create_link(title, url, tags, excerpt):
