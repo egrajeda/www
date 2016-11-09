@@ -40,5 +40,11 @@
     "category": "happiness", 
     "excerpt": "Western consumer culture is creating a psycho-spiritual crisis that leaves us disoriented and bereft of purpose. How can we treat our sick culture and make ourselves well? asks John F Schumaker.  Our descent into the Age of Depression seems unstoppable.", 
     "title": "The demoralized mind"
+  }, 
+  {
+    "url": "http://martinfowler.com/bliki/CraftmanshipAndTheCrevasse.html", 
+    "category": "agile", 
+    "excerpt": "Dan North's recent blog post on software craftsmanship has   unleashed a lot of blog discussions (which I summarize below, if   you're interested). There's a lot in there, but one of his themes   particularly resonated with me, hence this post.", 
+    "title": "CraftmanshipAndTheCrevasse"
   }
 ]
