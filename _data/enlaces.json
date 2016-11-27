@@ -46,5 +46,11 @@
     "category": "agile", 
     "excerpt": "Dan North's recent blog post on software craftsmanship has   unleashed a lot of blog discussions (which I summarize below, if   you're interested). There's a lot in there, but one of his themes   particularly resonated with me, hence this post.", 
     "title": "CraftmanshipAndTheCrevasse"
+  }, 
+  {
+    "url": "https://www.youtube.com/watch?list=PLpi1lPB6opQzSSOQU8JQLExuP1JUXPtmA&v=JC-UJwBKc2Y", 
+    "category": "programming", 
+    "excerpt": "Brennan Saeta, CourseraCoursera\u2019s educational platform has a broad API surface implemented in a standardized, sophisticated HTTP/JSON framework backed by a distributed microservice architecture. However, one of the biggest challenges engineers face is assembling all the data required to render the", 
+    "title": "Coursera's API Evolution"
   }
 ]
