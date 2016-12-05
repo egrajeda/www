@@ -58,5 +58,11 @@
     "category": "programming", 
     "excerpt": "Good software architects understand that their role as a leader is not necessarily telling developers what to do.", 
     "title": "The Well Rounded Architect"
+  }, 
+  {
+    "url": "http://glen.nu/ramblings/oncodereview.php", 
+    "category": "programming", 
+    "excerpt": "A question that comes up in 1:1s from time to time is \"how much time should I be spending on code reviews?\" The short answer is \"as long as it takes.\" Minimally, your day should begin and end with clearing your code-review backlog.", 
+    "title": "Expect to spend time on code review every day, throughout the day"
   }
 ]
