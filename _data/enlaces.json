@@ -52,5 +52,11 @@
     "category": "programming", 
     "excerpt": "Brennan Saeta, CourseraCoursera\u2019s educational platform has a broad API surface implemented in a standardized, sophisticated HTTP/JSON framework backed by a distributed microservice architecture. However, one of the biggest challenges engineers face is assembling all the data required to render the", 
     "title": "Coursera's API Evolution"
+  }, 
+  {
+    "url": "https://www.thekua.com/atwork/2016/11/the-well-rounded-architect/", 
+    "category": "programming", 
+    "excerpt": "Good software architects understand that their role as a leader is not necessarily telling developers what to do.", 
+    "title": "The Well Rounded Architect"
   }
 ]
