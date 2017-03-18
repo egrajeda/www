@@ -14,39 +14,53 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <!-- Created with (a heavily modified version of) Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/apuntes">Apuntes</a>
-            <a href="{{ site.baseurl }}/enlaces">Enlaces</a>
-          </nav>
-        </header>
+    <header>
+      <div>
+        <a href="{{ site.baseurl }}/">
+          <img src="{{ site.avatar }}" />
+        </a>
+        <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+        <p>Software Engineer</p>
       </div>
-    </div>
 
-    <div id="main" role="main" class="container">
+      <hr />
+
+      <nav>
+        <a href="{{ site.baseurl }}/apuntes">Apuntes</a>
+        <a href="{{ site.baseurl }}/enlaces">Enlaces</a>
+      </nav>
+
+      <hr />
+    </header>
+
+    <main>
       {{ content }}
-    </div>
+    </main>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+    <footer>
+      <hr />
+
+      {% if site.footer-links.github %}
+        <a href="https://github.com/{{ site.footer-links.github }}"><i class="svg-icon github"></i></a>
+      {% endif %}
+      {% if site.footer-links.linkedin %}
+        <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}"><i class="svg-icon linkedin"></i></a>
+      {% endif %}
+      {% if site.footer-links.rss %}
+        <a href="{{ site.baseurl }}/feed.xml"><i class="svg-icon rss"></i></a>
+      {% endif %}
+      {% if site.footer-links.twitter %}
+        <a href="https://www.twitter.com/{{ site.footer-links.twitter }}"><i class="svg-icon twitter"></i></a>
+      {% endif %}
+
+      <div>
+        Icons <a href="http://www.flaticon.com/authors/gregor-cresnar" target="_blank">designed by Gregor Cresnar from Flaticon</a>.
       </div>
-    </div>
+    </footer>
 
     {% include analytics.html %}
   </body>
