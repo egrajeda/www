@@ -2,59 +2,32 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-
-    {% capture date %}
-      {% assign m = post.date | date: "%-m" %}
-      {{ post.date | date: "%-d" }} de
-      {% case m %}
-        {% when "1" %}enero
-        {% when "2" %}febrero
-        {% when "3" %}marzo
-        {% when "4" %}abril
-        {% when "5" %}mayo
-        {% when "6" %}junio
-        {% when "7" %}julio
-        {% when "8" %}agosto
-        {% when "9" %}septiembre
-        {% when "10" %}octubre
-        {% when "11" %}noviembre
-        {% when "12" %}diciembre
-      {% endcase %}
-      de {{ post.date | date: "%Y" }}
-    {% endcapture %}
-
-    {% if post.categories contains "apuntes" %}
-      <article class="update apuntes">
-        <span class="date">{{ date }}</span>
-        <h2>
-          {% if post.categories contains "podcasts" %}
-            Apunte sobre podcast
-          {% else %}
-            Apunte
-          {% endif %}
-          agregado o actualizado:
-        </h2>
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      </article>
-    {% elsif post.categories contains "enlaces" %}
-      <article class="update enlaces">
-        <span class="date">{{ date }}</span>
-        <h1><a href="{{ post.url |
-            replace_first: '/https:/', 'https://' |
-            replace_first: '/http:/' , 'http://' }}">{{ post.title }}</a></h1>
-        <h2>ha sido agregado a la colección de enlaces.</h2>
-      </article>
-    {% else %}
+<div class="frontpage">
+  <div class="posts">
+    {% for post in site.posts %}
       <article class="post">
-        <span class="date">{{ date }}</span>
+        <span class="date">{{ post.date | date: "%-d" }} de {% include function.translate_month_of date=post.date %} de {{ post.date | date: "%Y" }}</span>
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
         <div class="entry">
           {{ post.excerpt }}
         </div>
       </article>
-    {% endif %}
-  {% endfor %}
+    {% endfor %}
+  </div>
+
+  <div class="activity">
+    {% for event in site.data.activity %}
+      {% assign date = event.date | date: "%Y%m" %}
+      {% if date != last_date %}
+        <span class="date">{% include function.translate_month_of date=event.date %} {{ event.date | date: "%Y" }}</span>
+        {% assign last_date = date %}
+      {% endif %}
+      <div class="event">
+        {% if event.service == "pinboard" %}
+          <a href="{{ event.url }}" target="_blank">{{ event.title }}</a> fue agregado a la colección de enlaces.
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
 </div>

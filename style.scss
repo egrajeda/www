@@ -135,7 +135,6 @@ main {
     @include grid-column(10);
     @include grid-push(1);
   }
-
 }
 
 footer {
@@ -169,45 +168,41 @@ footer {
   }
 }
 
-.posts {
-  h1 {
-    margin: 0;
-    font-size: 1.25em;
+.frontpage {
+  @include grid-collapse;
+  @include grid-container;
 
-    a {
+  .posts, .activity {
+    .date {
+      font-size: 1em;
+      font-weight: bold;
     }
   }
 
-  h2 {
-    margin: 0;
-    color: $tertiary;
+  .posts {
+    @include grid-column(7);
+
+    h1 {
+      margin: 0;
+      font-size: 1.25em;
+    }
+
+
+    & > article {
+      margin: 0 0 1.75em;
+    }
   }
 
-  .date, h2 {
-    font-size: 1em;
-    font-weight: bold;
-  }
+  .activity {
+    @include grid-column(5);
 
-  & > article {
-    margin: 0 0 1.75em;
-
-    &.update {
-      padding: 0 0 0 75px;
-      background-repeat: no-repeat;
-      background-position: 10px;
-      background-size: 50px;
+    .date {
+      text-transform: capitalize;
     }
 
-    &.update.enlaces {
-      background-image: url(images/connection-1.svg);
-    }
-
-    &.update.apuntes {
-      background-image: url(images/head.svg);
-    }
-
-    &:last-child {
-      margin-bottom: 0;
+    .event {
+      color: $tertiary;
+      margin: 0 0 0.5em;
     }
   }
 }
