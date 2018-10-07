@@ -172,7 +172,7 @@ footer {
   @include grid-collapse;
   @include grid-container;
 
-  .posts, .activity {
+  .posts, .bookmarks {
     .date {
       font-size: 1em;
       font-weight: bold;
@@ -182,27 +182,33 @@ footer {
   .posts {
     @include grid-column(7);
 
-    h1 {
+    h2 {
       margin: 0;
       font-size: 1.25em;
     }
-
 
     & > article {
       margin: 0 0 1.75em;
     }
   }
 
-  .activity {
+  .bookmarks {
+    position: relative;
     @include grid-column(5);
 
-    .date {
-      text-transform: capitalize;
+    .loading {
+      position: absolute;
+      left: 50%;
+      margin: 50px 0 0 -100px;
     }
 
-    .event {
-      color: $tertiary;
-      margin: 0 0 0.5em;
+    .bookmark {
+      font-size: 0.9em;
+      margin: 0 0 1em 0;
+
+      p {
+        margin: 0;
+      }
     }
   }
 }
