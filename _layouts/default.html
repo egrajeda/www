@@ -56,8 +56,14 @@
       {% if site.footer-links.twitter %}
         <a href="https://www.twitter.com/{{ site.footer-links.twitter }}"><i class="svg-icon twitter"></i></a>
       {% endif %}
+
+      <div>
+        ❤ spinner by <a href="https://loading.io/spinner/heart" target="_blank">loading.io</a>.
+      </div>
     </footer>
 
     {% include analytics.html %}
+
+    <script type="text/javascript" src="{{ site.baseurl }}/pinboard-react-widget.js"></script>
   </body>
 </html>
