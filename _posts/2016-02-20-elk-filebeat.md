@@ -30,7 +30,7 @@ Para crear un entorno de prueba con ELK vamos a utilizar [Docker][1] y la imagen
 egrajeda@host:~$ docker pull sebp/elk
 ```
 
-<div class="info">
+<div class="alert alert-info">
   <p>Para descargar exactamente la misma imagen que se utilizó al escribir este
   documento utiliza:</p>
 
@@ -158,11 +158,11 @@ ellas:
    especificar múltiples archivos: uno por línea y deben empezar con `-`.
 2. `hosts`: Los servidores Logstash a los cuales conectarse.
 
-<div class="info">
+<div class="alert alert-info">
   <p>Para estas pruebas utilicé una versión anonimizada de un subconjunto (3000
   líneas) de <a href="http://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html">access
   logs publicados por la NASA</a>. Si deseas usar el mismo archivo,
-  <a href="{{ site.baseurl }}/downloads/access_log">descárgalo</a> y guárdalo
+  <a href="/downloads/access_log">descárgalo</a> y guárdalo
   en la carpeta <code>~/labs/elk-filebeat</code>.</p>
 </div>
 
@@ -191,8 +191,8 @@ single.go:159: INFO backoff retry: 4s
 
 El problema es que nuestro contenedor Docker está configurado para que la
 comunicación con Logstash se haga de forma encriptada, pero Filebeat no puede
-validar los certificados. Como estamos configurando un entorno de prueba (<u>no
-hagas esto en producción</u>), actualizaremos la configuración para ignorar la
+validar los certificados. Como estamos configurando un entorno de prueba (<mark>no
+hagas esto en producción</mark>), actualizaremos la configuración para ignorar la
 validez de los certificados:
 
 ```
@@ -203,7 +203,7 @@ output:
             insecure: true
 ```
 
-<div class="info">
+<div class="alert alert-info">
   <p>Si prefieres configurar Filebeat para que reconozca los certificados
   utilizados por nuestro contenedor Docker, puedes seguir
   <a href="http://elk-docker.readthedocs.org/#notes-on-certificates">
@@ -250,19 +250,19 @@ donde deberás especificar el patrón que siguen los índices que deseas analiza
 Como lo vimos anteriormente, Filebeat crea índices bajo el patrón `filebeat-*`.
 En la página de configuración aparecerá por defecto el patrón `logstash-*`,
 reemplázalo por `filebeat-*`, no modifiques ninguno de los otros campos y haz
-clic en **Create**:
+clic en <kbd>Create</kbd>:
 
-![Kibana settings page]({{ site.baseurl }}/images/kibana-settings.png)
+![Kibana settings page](/images/kibana-settings.png)
 
-Haz ahora clic en **Discover** en la barra superior. Serás redireccionado a una
+Haz ahora clic en <kbd>Discover</kbd> en la barra superior. Serás redireccionado a una
 página desde la cual podrás analizar la información que has enviado:
 
-![Kibana discover page]({{ site.baseurl }}/images/kibana-discover.png)
+![Kibana discover page](/images/kibana-discover.png)
 
 Si en tus pruebas no logras ver nada, asegúrate que la fecha en la parte superior
 derecha (donde en la captura de pantalla dice "*February 19th 2016...*")
 corresponda a la fecha en que enviaste la información a Logstash (en la mayoría
-de los casos deberá ser **Today**).
+de los casos deberá ser <kbd>Today</kbd>).
 
 Un par de observaciones:
 
@@ -281,8 +281,8 @@ información de los mensajes enviados a Logstash.
 ## Notas adicionales
 
 Los siguientes comandos me resultaron muy útiles durante mi experimentación con
-ELK y Filebeat. Si los deseas utilizar en un entorno de producción, <u>asegurate
-de leer toda la documentación oficial</u>, ya que la mayoría de ellos podría
+ELK y Filebeat. Si los deseas utilizar en un entorno de producción, <mark>asegurate
+de leer toda la documentación oficial</mark>, ya que la mayoría de ellos podría
 corromper (o eliminar) la información que ya tienes almacenada.
 
 ### Eliminar todos los datos

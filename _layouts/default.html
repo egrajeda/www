@@ -1,69 +1,72 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74102322-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-    {% include meta.html %}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+      gtag('js', new Date());
 
-    <link href='//fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css' />
+      gtag('config', 'UA-74102322-1');
+    </script>
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Created with (a heavily modified version of) Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt|strip_html }}"/>
+    <meta property="og:description" content="{{ page.excerpt|strip_html }}"/>
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ site.description }}"/>
+    {% endif %}
+    <meta name="author" content="{{ site.name }}"/>
 
-  <body>
-    <header>
-      <div>
-        <a href="{{ site.baseurl }}/">
-          <img src="{{ site.avatar }}" />
-        </a>
-        <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-        <p>Software Engineer</p>
-      </div>
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="twitter:title" content="{{ page.title }}"/>
+    {% endif %}
 
-      <hr />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700" rel="stylesheet">
 
-      <nav>
-        <a href="{{ site.baseurl }}/apuntes">Apuntes</a>
-        <a href="https://pinboard.in/u:egrajeda">Enlaces</a>
-      </nav>
+    <link rel="stylesheet" href="/assets/style.css"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml"/>
 
-      <hr />
-    </header>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+</head>
+<body>
+<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 egb-site-header">
+    <a href="/">
+        <img class="rounded mr-md-2" src="https://s.gravatar.com/avatar/11f875d7d5feb4fbeec8c5c6426a2b82?s=75"
+             alt="{{ site.name }}"/>
+    </a>
+    <div class="mr-md-auto">
+        <h1 class="mb-1">{{ site.name }}</h1>
+        <h2>
+            <a href="https://linkedin.com/in/egrajeda" target="_blank">Engineering Team Lead</a> at
+            <a href="https://linkedin.com/in/egrajeda" target="_blank">ServiceRocket</a>
+        </h2>
+    </div>
 
-    <main>
-      {{ content }}
-    </main>
+    <nav class="my-2 my-md-0 mr-md-3 egb-nav">
+        <a class="p-2 egb-nav-selected"
+           href="/">Front Page</a>
+        <a class="p-2 text-dark" target="_blank"
+           href="https://github.com/egrajeda">Code</a>
+        <a class="p-2 text-dark" target="_blank"
+           href="https://pinboard.in/u:egrajeda">Bookmarks</a>
+        <a class="p-2 text-dark " target="_blank"
+           href="https://www.goodreads.com/review/list/12882530-eduardo-grajeda?shelf=read&view=covers&sort=date_read">Books</a>
+    </nav>
+</header>
 
-    <footer>
-      <hr />
+<main>
+    {{ content }}
+</main>
 
-      {% if site.footer-links.github %}
-        <a href="https://github.com/{{ site.footer-links.github }}"><i class="svg-icon github"></i></a>
-      {% endif %}
-      {% if site.footer-links.linkedin %}
-        <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}"><i class="svg-icon linkedin"></i></a>
-      {% endif %}
-      {% if site.footer-links.rss %}
-        <a href="{{ site.baseurl }}/feed.xml"><i class="svg-icon rss"></i></a>
-      {% endif %}
-      {% if site.footer-links.twitter %}
-        <a href="https://www.twitter.com/{{ site.footer-links.twitter }}"><i class="svg-icon twitter"></i></a>
-      {% endif %}
-
-      <div>
-        ❤ spinner by <a href="https://loading.io/spinner/heart" target="_blank">loading.io</a>.
-      </div>
-    </footer>
-
-    {% include analytics.html %}
-
-    <script type="text/javascript" src="{{ site.baseurl }}/pinboard-react-widget.js"></script>
-  </body>
+</body>
 </html>
