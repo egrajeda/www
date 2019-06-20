@@ -24,7 +24,7 @@
     <meta name="description" content="{{ site.description }}">
     <meta property="og:description" content="{{ site.description }}"/>
     {% endif %}
-    <meta name="author" content="{{ site.name }}"/>
+    <meta name="author" content="Eduardo Grajeda Blandón"/>
 
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}"/>
@@ -34,32 +34,32 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/style.css"/>
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml"/>
+    <link rel="alternate" type="application/rss+xml" title="Eduardo Grajeda Blandón" href="/feed.xml"/>
 
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+    <title>Eduardo Grajeda Blandón</title>
 </head>
 <body>
-<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 egb-site-header">
+<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 egb-site-header h-card">
     <a href="/">
-        <img class="rounded mr-md-2" src="https://s.gravatar.com/avatar/11f875d7d5feb4fbeec8c5c6426a2b82?s=75"
-             alt="{{ site.name }}"/>
+        <img class="rounded mr-md-2 u-photo" src="https://s.gravatar.com/avatar/11f875d7d5feb4fbeec8c5c6426a2b82?s=75"
+             alt="Eduardo Grajeda Blandón"/>
     </a>
     <div class="mr-md-auto">
-        <h1 class="mb-1">{{ site.name }}</h1>
+        <h1 class="mb-1 p-name">Eduardo Grajeda Blandón</h1>
         <h2>
-            <a href="https://linkedin.com/in/egrajeda" target="_blank">Software Engineer</a> at
-            <a href="https://linkedin.com/in/egrajeda" target="_blank">Criteo</a>
+            <a class="p-job-title" href="https://linkedin.com/in/egrajeda" target="_blank" rel="me">Software Engineer</a> at
+            <a class="p-org" href="https://linkedin.com/in/egrajeda" target="_blank" rel="me">Criteo</a>
         </h2>
     </div>
 
     <nav class="my-2 my-md-0 mr-md-3 egb-nav">
         <a class="p-2 egb-nav-selected"
            href="/">Front Page</a>
-        <a class="p-2 text-dark" target="_blank"
+        <a class="p-2 text-dark" target="_blank" rel="me"
            href="https://github.com/egrajeda">Code</a>
-        <a class="p-2 text-dark" target="_blank"
+        <a class="p-2 text-dark" target="_blank" rel="me"
            href="https://pinboard.in/u:egrajeda">Bookmarks</a>
-        <a class="p-2 text-dark " target="_blank"
+        <a class="p-2 text-dark " target="_blank" rel="me"
            href="https://www.goodreads.com/review/list/12882530-eduardo-grajeda?shelf=read&view=covers&sort=date_read">Books</a>
     </nav>
 </header>
