@@ -1,10 +1,17 @@
 ---
 layout: post
 title: Are You Infected by Microservice Envy?
+language: es
 ---
 
-Apuntes personales que he tomado al escuchar el podcast [Are You Infected By Microservice Envy?](https://soundcloud.com/thoughtworks/are-you-infected-by-microservice-envy)
-de [Scott Shaw](https://twitter.com/scottwshaw).
+<p class="lead">
+  Apuntes personales que he tomado al escuchar el podcast <a
+  href="https://soundcloud.com/thoughtworks/are-you-infected-by-microservice-envy">Are
+  You Infected By Microservice Envy?</a> de <a
+  href="https://twitter.com/scottwshaw">Scott Shaw</a>.
+</p>
+
+<hr />
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/206283659&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 

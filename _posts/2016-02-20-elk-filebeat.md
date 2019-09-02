@@ -1,13 +1,17 @@
 ---
 layout: post
 title: Configuración de un entorno de prueba de ELK con Filebeat
+language: es
 ---
 
-En este documento detallo, tanto para referencia personal como para cualquier
-otra persona que le pueda servir, los primeros pasos que seguí al experimentar
-con Elasticsearch, Logstash, Kibana y Filebeat. La meta será instalar ELK y
-Filebeat, enviar datos de uno a otro, y configurar Kibana para verificar que los
-datos han sido enviados exitosamente.
+<p class="lead">
+  En este documento puedes encontrar los pasos que seguí al experimentar con
+  Elasticsearch, Logstash, Kibana y Filebeat. La meta es instalar ELK y
+  Filebeat, enviar datos de uno a otro, y configurar Kibana para verificar que
+  los datos han sido enviados exitosamente.
+</p>
+
+<hr />
 
 ## Instalación de Elasticsearch, Logstash y Kibana
 
