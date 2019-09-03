@@ -2,6 +2,7 @@
 ---
 
 @import "bootstrap/bootstrap";
+@import "pastie.css";
 
 h1, h2, h3, .egb-nav a, .egb-posted-on {
   font-family: "Roboto Condensed"; // TODO: correct way to overwrite
@@ -26,16 +27,26 @@ h3 {
   font-weight: 700;
 }
 
-pre.highlight, code {
-  @extend .p-2;
-  @extend .text-dark;
+figure.highlight, div.highlight {
+  @extend .mb-3;
   background-color: #f8f9fe;
-}
 
-pre.highlight {
+  pre {
+    @extend .p-2;
+    @extend .m-0;
+    background-color: #f8f9fe;
+  }
+
   code {
     @extend .p-0;
   }
+}
+
+code {
+  @extend .p-1;
+  @extend .text-dark;
+  background-color: #f8f9fe;
+
 }
 
 .egb-front-page, .egb-site-header {

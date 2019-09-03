@@ -38,7 +38,9 @@ egrajeda@host:~$ docker pull sebp/elk
   <p>Para descargar exactamente la misma imagen que se utilizó al escribir este
   documento utiliza:</p>
 
-  <pre class="highlight"><code class="language-text" data-lang="text">egrajeda@host:~$ docker pull sebp/elk@sha256:919c9e3e9ac95f4860fe2c8d3ec480ce1e1d9b39939adb76649b4257586a53d8</code></pre>
+  <div class="highlight">
+    <pre class="highlight"><code>egrajeda@host:~$ docker pull sebp/elk@sha256:919c9e3e9ac95f4860fe2c8d3ec480ce1e1d9b39939adb76649b4257586a53d8</code></pre>
+  </div>
 </div>
 
 Después creamos el contenedor a partir de la imagen que descargamos:
@@ -199,7 +201,7 @@ validar los certificados. Como estamos configurando un entorno de prueba (<mark>
 hagas esto en producción</mark>), actualizaremos la configuración para ignorar la
 validez de los certificados:
 
-```
+```yaml
 output:
     logstash:
         hosts: ["172.17.0.2:5044"]
