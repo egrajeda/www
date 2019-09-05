@@ -1,9 +1,9 @@
 ---
 layout: post
-permalink: /typescript-react-setup/
 title: TypeScript with React Setup
-tags: typescript, react, setup
+tags: [typescript, react, setup]
 language: en
+break: true
 ---
 
 <p class="lead">

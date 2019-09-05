@@ -1,8 +1,7 @@
 ---
 layout: post
-permalink: /javascript-setup/
-tags: javascript, setup
 title: Javascript Setup
+tags: [javascript, setup]
 language: en
 ---
 

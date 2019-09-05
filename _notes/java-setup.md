@@ -1,8 +1,7 @@
 ---
 layout: post
-permalink: /java-setup/
 title: Java Setup
-tags: java, setup
+tags: [java, setup]
 language: en
 ---
 
