@@ -75,12 +75,12 @@ code {
   }
 }
 
-.egb-nav-selected {
+a.egb-nav-selected {
   background-color: #f36d60;
-  color: white;
+  color: white !important;
 
   &:hover {
-    color: white;
+    color: white !important;
     text-decoration: none;
   }
 }
