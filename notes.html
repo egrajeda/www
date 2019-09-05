@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% assign start = 0 %}
+{% assign n = site.notes | size | minus: 1 %}
+
+{% assign letter = "A" %}
+<div class="container egb-index-page">
+    <div class="row">
+        {% for column in (0..1) %}
+            <div class="col-sm">
+                {% for i in (start..n) %}
+                    {% assign note = site.notes[i] %}
+
+                    {% if note.break and start == 0 %}
+                        {% assign start = i %}
+                        {% break %}
+                    {% endif %}
+
+                    {% assign current_letter =  note.title | slice: 0 %}
+                    {% if current_letter != letter %}
+                        {% assign letter = current_letter %}
+
+                        <h1>{{ letter }}</h1>
+                        <hr />
+                    {% endif %}
+
+                    <h2>
+                        <a href="{{ note.url }}">{{ note.title }}</a>
+                    </h2>
+                    <div class="text-secondary">
+                        <p>
+                            {{ note.excerpt | strip_html }}
+                        </p>
+                    </div>
+                {% endfor %}
+            </div> 
+        {% endfor %}
+    </div>
+</div>
