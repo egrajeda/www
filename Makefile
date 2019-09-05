@@ -3,7 +3,8 @@ serve:
 		--volume="$(CURDIR):/srv/jekyll" \
 		--volume="$(CURDIR)/vendor/bundle:/usr/local/bundle" \
 		--publish=4000:4000 \
-		jekyll/jekyll jekyll serve
+		--publish=35729:35729 \
+		jekyll/jekyll jekyll serve --livereload
 
 update:
 	docker run --rm -it \
