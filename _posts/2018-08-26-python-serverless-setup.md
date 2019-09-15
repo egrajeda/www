@@ -86,7 +86,7 @@ I create one directory per function to try and keep their code, tests and
 dependencies as separate as possible. In this example, each function has its
 own directory: `functions/hello/` and `functions/joke/`.
 
-![The directory structure](https://thepracticaldev.s3.amazonaws.com/i/k0cdhyo5mjwfol62zk8a.png){: .float-left}
+![The directory structure](/images/python-serverless-setup-structure.png){: .float-left}
 
 The function handler's code is always inside `lib/function.py`. I create as
 many files inside `lib/` as necessary, but the entry point is always in the
