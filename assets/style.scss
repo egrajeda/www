@@ -19,12 +19,20 @@ h1 {
 
 h2 {
   font-size: 22px;
-  color: #f36d60;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 18px;
   font-weight: 700;
+}
+
+h1, h2, h3 {
+  clear: both;
+}
+
+h1 > code, h2 > code, h3 > code {
+  color: inherit !important;
 }
 
 figure.highlight, div.highlight {
@@ -55,13 +63,11 @@ code {
   }
 
   h2 {
-    @extend .text-dark;
     font-size: 18px;
     margin-bottom: 0;
 
     a {
       @extend .text-dark;
-      font-weight: 700;
     }
   }
 }
@@ -105,7 +111,16 @@ a.egb-nav-selected {
 }
 
 .egb-post {
+  h2 {
+    @extend .mt-4;
+  }
+
   img {
     @extend .img-fluid;
+
+    &.float-left {
+      @extend .mb-3;
+      @extend .mr-3;
+    }
   }
 }
