@@ -27,10 +27,6 @@ h3 {
   font-weight: 700;
 }
 
-h1, h2, h3 {
-  clear: both;
-}
-
 h1 > code, h2 > code, h3 > code {
   color: inherit !important;
 }
@@ -111,6 +107,10 @@ a.egb-nav-selected {
 }
 
 .egb-post {
+  h1, h2, h3 {
+    clear: both;
+  }
+
   h2 {
     @extend .mt-4;
   }
