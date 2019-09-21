@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My Python Serverless Setup
+updated: 2018-08-26
 language: en
 ---
 

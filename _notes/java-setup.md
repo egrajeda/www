@@ -2,6 +2,7 @@
 layout: post
 title: Java Setup
 tags: [java, setup]
+updated: 2019-09-05
 language: en
 ---
 

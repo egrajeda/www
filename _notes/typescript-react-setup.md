@@ -1,9 +1,9 @@
 ---
 layout: post
-title: TypeScript with React Setup
+title: "TypeScript with React: Setup"
 tags: [typescript, react, setup]
+updated: 2019-09-05
 language: en
-break: true
 ---
 
 <p class="lead">

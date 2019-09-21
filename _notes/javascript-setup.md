@@ -2,6 +2,7 @@
 layout: post
 title: Javascript Setup
 tags: [javascript, setup]
+updated: 2019-09-05
 language: en
 ---
 

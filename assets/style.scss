@@ -4,7 +4,7 @@
 @import "bootstrap/bootstrap";
 @import "pastie.css";
 
-h1, h2, h3, .egb-nav a, .egb-posted-on {
+h1, h2, h3, .egb-nav a, .egb-posted-on, .egb-updated-on {
   font-family: "Roboto Condensed"; // TODO: correct way to overwrite
 }
 
@@ -87,7 +87,7 @@ a.egb-nav-selected {
   }
 }
 
-.egb-posted-on {
+.egb-posted-on, .egb-updated-on {
   font-size: 14px;
 
   span {

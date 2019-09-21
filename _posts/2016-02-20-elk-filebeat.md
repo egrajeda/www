@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Configuración de un entorno de prueba de ELK con Filebeat
+updated: 2016-02-20
 language: es
 ---
 
