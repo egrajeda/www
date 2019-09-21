@@ -124,3 +124,36 @@ a.egb-nav-selected {
     }
   }
 }
+
+.collapsable {
+  &.collapsed pre {
+    max-height: 325px;
+    overflow: hidden;
+  }
+
+  a.expand, a.collapse {
+    @extend .p-1;
+    @extend .pl-2;
+    display: block;
+    font-size: 14px;
+    background-color: #eff0f5;
+  }
+
+  a.expand {
+    display: none;
+  }
+
+  a.collapse {
+    display: block;
+  }
+
+  &.collapsed {
+    a.expand {
+      display: block;
+    }
+
+    a.collapse {
+      display: none;
+    }
+  }
+}
