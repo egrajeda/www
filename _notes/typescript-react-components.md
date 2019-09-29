@@ -13,6 +13,26 @@ break: true
 
 <hr />
 
+To define a `React.FunctionComponent<>` connected to Redux using hooks:
+
+```jsx
+interface IProps {
+  title: string;
+}
+
+export const MyComponent: React.FunctionComponent<IProps> = ({
+  title
+}) => {
+  const [content, setContent] = useState(null);
+  const comments = useSelector((state: TAppState) => state.comments);
+  const dispatch = useDispatch();
+
+  return (
+    <button onClick={() => dispatch(doSomething())}>Save</button>
+  );
+};
+```
+
 To define a `React.Component<>` connected to Redux with properties and state:
 
 {% collapse %}
