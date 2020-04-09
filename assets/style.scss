@@ -50,7 +50,11 @@ code {
   @extend .p-1;
   @extend .text-dark;
   background-color: #f8f9fe;
+}
 
+hr.small {
+  width: 20%;
+  margin: 25px auto;
 }
 
 .egb-index-page, .egb-site-header {
