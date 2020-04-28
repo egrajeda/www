@@ -35,7 +35,6 @@ export const MyComponent: React.FunctionComponent<IProps> = ({
 
 To define a `React.Component<>` connected to Redux with properties and state:
 
-{% collapse %}
 ```jsx
 // updateTitle is a function defined in a separate file
 interface IProps {
@@ -92,7 +91,6 @@ export default connect(
   mapDispatchToProps
 )(AdminEditPost);
 ```
-{% endcollapse %}
 
 ## Conventions
 

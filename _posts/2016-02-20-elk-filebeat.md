@@ -35,7 +35,7 @@ Para crear un entorno de prueba con ELK vamos a utilizar [Docker][1] y la imagen
 egrajeda@host:~$ docker pull sebp/elk
 ```
 
-<div class="alert alert-info">
+<div class="alert">
   <p>Para descargar exactamente la misma imagen que se utilizó al escribir este
   documento utiliza:</p>
 
@@ -165,7 +165,7 @@ ellas:
    especificar múltiples archivos: uno por línea y deben empezar con `-`.
 2. `hosts`: Los servidores Logstash a los cuales conectarse.
 
-<div class="alert alert-info">
+<div class="alert">
   <p>Para estas pruebas utilicé una versión anonimizada de un subconjunto (3000
   líneas) de <a href="http://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html">access
   logs publicados por la NASA</a>. Si deseas usar el mismo archivo,
@@ -210,7 +210,7 @@ output:
             insecure: true
 ```
 
-<div class="alert alert-info">
+<div class="alert">
   <p>Si prefieres configurar Filebeat para que reconozca los certificados
   utilizados por nuestro contenedor Docker, puedes seguir
   <a href="http://elk-docker.readthedocs.org/#notes-on-certificates">

@@ -23,13 +23,12 @@ layout: default
                         {% assign letter = current_letter %}
 
                         <h1>{{ letter }}</h1>
-                        <hr />
                     {% endif %}
 
                     <h2>
                         <a href="{{ note.url }}">{{ note.title }}</a>
                     </h2>
-                    <div class="text-secondary">
+                    <div>
                         <p>
                             {{ note.excerpt | strip_html }}
                         </p>

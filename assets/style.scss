@@ -2,157 +2,136 @@
 ---
 
 @import "bootstrap/bootstrap";
-@import "pastie.css";
 
-h1, h2, h3, .egb-nav a, .egb-posted-on, .egb-updated-on {
-  font-family: "Roboto Condensed"; // TODO: correct way to overwrite
+$serif: "Zilla Slab";
+$monospace: "Fira Code";
+
+$primary: rgba(0, 0, 0, 0.9);
+$secondary: rgba(0, 0, 0, 0.4);
+$border: rgba(0, 0, 0, 0.1);
+$link: blue;
+
+$highlight1: #c42c1f;
+$highlight2: #f8f9fe;
+$highlight3: #fcf8e3;
+
+body {
+    color: $primary;
+    font-family: $serif;
+    font-size: 18px;
 }
 
-h1, .egb-nav a {
-  text-transform: uppercase;
+h1, h2, h3 {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 h1 {
-  font-size: 30px;
-  @extend .mb-3;
+    @extend .pb-3;
+    color: $highlight1;
+    border-bottom: 1px solid $border;
 }
 
-h2 {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-h1 > code, h2 > code, h3 > code {
-  color: inherit !important;
-}
-
-figure.highlight, div.highlight {
-  @extend .mb-3;
-  background-color: #f8f9fe;
-
-  pre {
-    @extend .p-2;
-    @extend .m-0;
-    background-color: #f8f9fe;
-  }
-
-  code {
-    @extend .p-0;
-  }
-}
-
-code {
-  @extend .p-1;
-  @extend .text-dark;
-  background-color: #f8f9fe;
-}
-
-.egb-index-page, .egb-site-header {
-  h1 {
-    font-size: 20px;
-  }
-
-  h2 {
-    font-size: 18px;
+h2, h3 {
     margin-bottom: 0;
-
-    a {
-      @extend .text-dark;
-    }
-  }
 }
 
+a, a:hover {
+    color: $link;
+    text-decoration: underline;
+}
+
+pre, code, kbd {
+    font-family: $monospace;
+    font-size: 14px;
+}
+
+// Front page
 .egb-site-header {
-  background-color: #f8f9fe;
+    background-color: $highlight2;
 
-  h1 {
-    font-family: inherit;
-    text-transform: inherit;
-  }
-}
-
-a.egb-nav-selected {
-  background-color: #f36d60;
-  color: white !important;
-
-  &:hover {
-    color: white !important;
-    text-decoration: none;
-  }
+    h1 {
+        @extend .pb-0;
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
 }
 
 .egb-posted-on, .egb-updated-on {
-  font-size: 14px;
-
-  span {
-    color: #f36d60;
-  }
+    color: $secondary;
 }
 
-.egb-currently-reading {
-  img {
-    max-height: 145px;
-  }
+a.egb-nav-selected {
+    background-color: $link;
+    color: $highlight2;
+}
 
-  p {
-    height: 120px;
+.egb-currently-reading > div, .egb-latest-bookmarks > div {
+    @extend .mb-3;
+    height: 190px;
     overflow: hidden;
-  }
+
+		img {
+        @extend .mr-2;
+        float: left;
+				height: 185px;
+		}
 }
 
-.egb-post {
-  h1, h2, h3 {
-    clear: both;
-  }
+// Code
+@import "pastie.css";
 
-  h2 {
-    @extend .mt-4;
-  }
-
-  img {
-    @extend .img-fluid;
-
-    &.float-left {
-      @extend .mb-3;
-      @extend .mr-3;
-    }
-  }
-}
-
-.collapsable {
-  &.collapsed pre {
-    max-height: 325px;
-    overflow: hidden;
-  }
-
-  a.expand, a.collapse {
+code {
     @extend .p-1;
-    @extend .pl-2;
-    display: block;
-    font-size: 14px;
-    background-color: #eff0f5;
-  }
-
-  a.expand {
-    display: none;
-  }
-
-  a.collapse {
-    display: block;
-  }
-
-  &.collapsed {
-    a.expand {
-      display: block;
-    }
-
-    a.collapse {
-      display: none;
-    }
-  }
+    color: $primary;
+    background-color: $highlight2;
 }
+
+figure.highlight, div.highlight {
+		@extend .mb-3;
+		background-color: $highlight2;
+
+		pre {
+				@extend .p-2;
+				@extend .m-0;
+				background-color: $highlight2;
+		}
+
+		code {
+				@extend .p-0;
+		}
+}
+
+// Post/Note
+.egb-post {
+		h1, h2, h3 {
+				clear: both;
+		}
+
+		h2 {
+        @extend .mt-4;
+		}
+
+		img {
+				@extend .img-fluid;
+
+				&.float-left {
+						@extend .mb-3;
+						@extend .mr-3;
+				}
+		}
+
+		.alert {
+				background-color: $highlight3;
+		}
+
+		// TODO: Remove me once I get rid of all the leads in the post and notes
+		.lead {
+				font-size: 18px;
+
+				& + hr {
+						display: none;
+				}
+		}
+}
+

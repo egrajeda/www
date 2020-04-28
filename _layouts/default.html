@@ -31,7 +31,7 @@
     <meta property="twitter:title" content="{{ page.title }}"/>
     {% endif %}
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&family=Zilla+Slab:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/style.css"/>
     <link rel="alternate" type="application/rss+xml" title="Eduardo Grajeda Blandón" href="/feed.xml"/>
@@ -47,23 +47,23 @@
                  alt="Eduardo Grajeda Blandón"/>
         </a>
         <div class="mr-md-auto mt-2 mt-sm-0 mb-2 mb-sm-0">
-            <h1 class="mb-1 p-name">Eduardo Grajeda Blandón</h1>
-            <h2 class="text-center text-md-left">
+            <h1 class="p-name">Eduardo Grajeda Blandón</h1>
+            <div>
                 <a class="p-job-title" href="https://linkedin.com/in/egrajeda" target="_blank" rel="me">Software Engineer</a> at
                 <a class="p-org" href="https://linkedin.com/in/egrajeda" target="_blank" rel="me">Criteo</a>
-            </h2>
+            </div>
         </div>
 
         <nav class="my-2 my-md-0 mr-md-3 egb-nav">
-            <a class="p-2 text-dark d-none d-sm-inline {% if page.url == "/" %}egb-nav-selected{% endif %}"
+            <a class="p-2 d-none d-sm-inline {% if page.url == "/" %}egb-nav-selected{% endif %}"
                href="/">Front Page</a>
-            <a class="p-2 text-dark {% if page.url == "/notes/" or page.collection == "notes" %}egb-nav-selected{% endif %}"
+            <a class="p-2 {% if page.url == "/notes/" or page.collection == "notes" %}egb-nav-selected{% endif %}"
                href="/notes">Notes</a>
-            <a class="p-2 text-dark" target="_blank" rel="me"
+            <a class="p-2" target="_blank" rel="me"
                href="https://github.com/egrajeda">Code</a>
-            <a class="p-2 text-dark" target="_blank" rel="me"
+            <a class="p-2" target="_blank" rel="me"
                href="https://pinboard.in/u:egrajeda">Bookmarks</a>
-            <a class="p-2 text-dark " target="_blank" rel="me"
+            <a class="p-2" target="_blank" rel="me"
                href="https://www.goodreads.com/review/list/12882530-eduardo-grajeda?shelf=read&view=covers&sort=date_read">Books</a>
         </nav>
     </div>
